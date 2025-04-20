@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laporan Teori</title>
+  <style id="theme-style">
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      padding: 20px;
+    }
+    h1 {
+      color: #1a73e8;
+    }
+    h2 {
+      color: #555;
+    }
+    h3 {
+      cursor: pointer;
+      color: skyblue;
+    }
+    .section-content {
+      margin-bottom: 20px;
+    }
+    .toggle-button {
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>LAPORAN TEORI</h1>
+  <h2>Violetta Jingga | 202332028</h2>
+
+  <button class="toggle-button" onclick="toggleTheme()">Beralih Tampilan</button>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">Soal 1</h3>
+    <div class="section-content">
+      <p>1. Mengapa menggunakan CSS dan JavaScript dalam pemrograman web?</p>
+      <p>CSS merupakan singkatan dari Cascanding Style Sheet yang dimana memungkinkan pengembang untuk memisahkan struktur (HTML) dari tampilan (CSS) dalam pengembangan web. CSS ini digunakan untuk mengubah tampilan dan tata letak elemen di html, dapat mengatur warna, ukuran teks, font , jarak antar elemen, dan banyak aspek lain dari desain halaman web.</p>
+      <p>JavaScript dalam sebuah web digunakan untuk membuat efek animasi, validasi formulir, pemrosesan data, membuat halaman web menjadi interaktif dan dinamis.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">Soal 2</h3>
+    <div class="section-content">
+      <p>2.	Bagaimana CSS dan JavaScript dapat diintegrasikan dalam pemrograman web</p>
+      <p>Pada CSS ada tig acara integrasikan ke web, yaitu :</p>
+      <ul>
+        <li>ditulis langsung pada style elemen html</li>
+        <li>ditulis dalam tag style dibagian head html</li>
+        <li>file css nya dipisah dan nanti dipanggil menggunakan link</li>
+      </ul>
+      <p>Untuk javascript juga ada beberapa cara untuk diintegrasikan pada web, yaitu :</p>
+      <ul>
+        <li>ditulis langsung pada elemen html</li>
+        <li>ditulis pada tag script pada file html, biasanya ini pada akhir bagian body</li>
+        <li>diletakkan pada file .js nanti dipanggil dengan tag script src =”   “</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">Soal 3</h3>
+    <div class="section-content">
+      <p>3.	Jelaskan keuntungan menggunakan javascript dan css</p>
+      <p>Pada pemrograman web dalam menggunakan java dan css memiliki keuntungannya masing-masing, keuntungan menggunakan css yaitu :</p>
+      <ol>
+        <li>memisahkan konten dan tampilan</li>
+        <li>konsistensi tampilan, css bisa digunakan untuk banyak halaman</li>
+        <li>memungkinkan web ditampilkan dengan baik</li>
+        <li>halaman berikutnya lebih cepat dan mudah diakses</li>
+        <li>mengurangai beban server</li>
+      </ol>
+      <p>Keuntungan menggunakan javascript pada web yaitu :</p>
+      <ol>
+        <li>memungkinkan halaman dapat merespon pengguna</li>
+        <li>mengambil dan mengirim data ke server</li>
+        <li>bisa melakukan banyak proses pada sisi pengguna</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">soal 4</h3>
+    <div class="section-content">
+      <p>4.	Jelaskan apa saja keuntungan menggunakan bootstrap.</p>
+      <p>Keuntungannya yaitu :</p>
+      <ul>
+        <li>responsif secara otomatis , web secara otomatis menyesuaikan ukuran layar</li>
+        <li>menyediakan banyak komponen UI bawaan , seperti form, tombol, alert</li>
+        <li>desain yang konsisten dan profesional , web langsung terlihat rapi tanpa ada desain custom</li>
+        <li>punya tampilan bootstrap , contohnya bisa mengganti warna utama</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">Soal 5</h3>
+    <div class="section-content">
+      <p>Berikan salah satu contoh penggunaan Bootstrap lalu jelaskan apa fungsinya
+        serta berikan screenshot hasil running di web-nya!</p>
+        <img src="coding.png" alt="codingannya" width="500">
+        <img src="hasil.png" alt="ini hasilnya" width="500">
+
+  <script>
+    function toggleSection(header) {
+      const content = header.nextElementSibling;
+      const userConfirmed = confirm("Apakah Anda ingin menyembunyikan isi dari bagian ini?");
+      if (userConfirmed) {
+        content.style.display = content.style.display === "none" ? "block" : "none";
+      }
+    }
+
+    let cleanTheme = true;
+
+    function toggleTheme() {
+      const style = document.getElementById("theme-style");
+      if (cleanTheme) {
+        style.innerHTML = `
+          body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #ff00ff;
+            color: #00ff00;
+            padding: 20px;
+          }
+          h1, h2, h3 {
+            color: #ffff00;
+          }
+          .section-content {
+            background-color: #0000ff;
+            color: #ff0000;
+          }
+          .toggle-button {
+            background-color: #000;
+            color: #fff;
+          }
+        `;
+      } else {
+        style.innerHTML = `
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #222;
+            padding: 20px;
+          }
+          h1 {
+            color: #1a73e8;
+          }
+          h2 {
+            color: #555;
+          }
+          h3 {
+            cursor: pointer;
+            color: #00796b;
+          }
+          .section-content {
+            margin-bottom: 20px;
+          }
+          .toggle-button {
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        `;
+      }
+      cleanTheme = !cleanTheme;
+    }
+  </script>
+</body>
+</html>
